@@ -1,0 +1,81 @@
+
+<!doctype html><html lang='en'><head>
+  <meta charset='utf-8'/><meta name='viewport' content='width=device-width, initial-scale=1'/>
+  <title>Reporting — RENA</title>
+  <link rel='stylesheet' href='assets/css/style.css'/>
+</head>
+<body data-page='reporting'>
+  
+<header>
+  <div class='container nav'>
+    <a class='logo' href='dashboard.html'>
+      <img src='assets/img/logo.png' alt='Logo'/>
+      <div class='brand'>
+        <span class='name'>RENA Database System</span>
+        <span class='sub'>Powered by SME Bank</span>
+      </div>
+    </a>
+    <nav class='menu'>
+      <a href='dashboard.html'>Dashboard</a>
+      <a href='assets.html'>Assets Listing</a>
+      <a href='buyers.html'>Buyer Listing</a>
+      <a href='match.html'>Match Buyer × Assets</a>
+      <a href='reporting.html'>Reporting</a>
+      <a href='help.html'>Help</a>
+    </nav>
+  </div>
+</header>
+
+  <main class='container'>
+    <div class='card'>
+      <div class='grid cols-2'>
+        <div>
+          <h3>Search</h3>
+          <select id='reportMode'>
+            <option value='asset'>By Asset</option>
+            <option value='buyer'>By Buyer</option>
+          </select>
+          <input id='reportSearch' placeholder='Enter name…' style='margin-top:.5rem'/>
+          <div class='toolbar'>
+            <button class='btn' onclick='runReport()'>Run Report</button>
+            <button class='btn secondary' onclick='exportReportCSV()'>Export CSV</button>
+            <button class='btn secondary' onclick='window.print()'>Save as PDF</button>
+          </div>
+        </div>
+        <div>
+          <div class='card'>
+            <div class='metric'>
+              <div><h3>Total Emails Sent</h3></div>
+              <div class='num' id='r_total'>0</div>
+            </div>
+          </div>
+          <div class='card' style='margin-top:1rem'>
+            <div class='metric'>
+              <div><h3>Replies Received</h3></div>
+              <div class='num' id='r_replies'>0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='card'>
+      <h3>Results</h3>
+      <table id='reportTable'>
+        <thead><tr>
+          <th>Date</th><th>Asset</th><th>Buyer</th><th>Status</th><th>Message</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+  
+<footer>
+  <div class='container footer-inner'>
+    <div>© <span id='year'></span> RENA Demo</div>
+    <div><a href='help.html'>Help</a> · <a href='#'>Privacy</a></div>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+  <script src='assets/js/app.js' defer></script>
+</body></html>

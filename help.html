@@ -1,0 +1,49 @@
+
+<!doctype html><html lang='en'><head>
+  <meta charset='utf-8'/><meta name='viewport' content='width=device-width, initial-scale=1'/>
+  <title>Help — RENA</title>
+  <link rel='stylesheet' href='assets/css/style.css'/>
+</head>
+<body data-page='help'>
+  
+<header>
+  <div class='container nav'>
+    <a class='logo' href='dashboard.html'>
+      <img src='assets/img/logo.png' alt='Logo'/>
+      <div class='brand'>
+        <span class='name'>RENA Database System</span>
+        <span class='sub'>Powered by SME Bank</span>
+      </div>
+    </a>
+    <nav class='menu'>
+      <a href='dashboard.html'>Dashboard</a>
+      <a href='assets.html'>Assets Listing</a>
+      <a href='buyers.html'>Buyer Listing</a>
+      <a href='match.html'>Match Buyer × Assets</a>
+      <a href='reporting.html'>Reporting</a>
+      <a href='help.html'>Help</a>
+    </nav>
+  </div>
+</header>
+
+  <main class='container'>
+    <div class='card'>
+      <h2 class='section-title'>RENA Help & FAQ (Demo)</h2>
+      <h3>Using this demo</h3>
+      <ul>
+        <li>All data is stored in <code>localStorage</code> within your browser. It’s per-device and per-folder.</li>
+        <li>New in v3.2: <strong>Delete</strong> buttons and <strong>Send Marketing Email</strong> per asset.</li>
+      </ul>
+    </div>
+  </main>
+  
+<footer>
+  <div class='container footer-inner'>
+    <div>© <span id='year'></span> RENA Demo</div>
+    <div><a href='help.html'>Help</a> · <a href='#'>Privacy</a></div>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+  <script src='assets/js/app.js' defer></script>
+</body></html>
